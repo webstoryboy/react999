@@ -34,10 +34,24 @@ class Detail extends React.Component {
                                     <Title text={['Reference','book','Reference book']} />
                                 </div>
                                 <div className="referCont">
-                                    <div>
-                                        <div>{location.state.title}</div>
-                                        <div>{location.state.desc}</div>
-                                        <div>{location.state.image}</div>
+                                    <div className="referDetail">
+                                        <h3>{location.state.title}</h3>
+                                        <dl>
+                                            <dt>설명</dt>
+                                            <dd>{location.state.desc}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>카테고리</dt>
+                                            <dd>{location.state.category}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>속성</dt>
+                                            <dd>{location.state.property}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>구조</dt>
+                                            <dd>{location.state.element}</dd>
+                                        </dl>
                                     </div>
                                 </div>
                             </div>

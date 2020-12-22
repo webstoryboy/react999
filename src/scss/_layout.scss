@@ -77,8 +77,6 @@
         color: $color-white;
     }
 }
-
-
 #header.white {
     background: $color-white;
     border-bottom: 1px solid #DAD8D1;
@@ -140,7 +138,6 @@
         }
     }
 }
-
 
 //container
 .container {
@@ -267,8 +264,6 @@
 }
 
 
-
-
 //about
 .aboutCont {
     > div {
@@ -331,10 +326,8 @@
 }
 
 //reference
-#referCont {}
 .referCont {
-
-    h2 {}
+    margin-bottom: 30vh;
 
     ul {
         border-top: 1px solid #000;
@@ -342,9 +335,50 @@
     li {
         border-bottom: 1px solid #000;
         padding: 20px;
+        transition: all 0.33s;
+        
+        &:hover {
+            background: rgba(0,0,0,0.1);
+        }
 
         a {
             font-family: $font-korea-sub;
+            display: flex;
+
+            
+
+            .alpha {
+                flex: 0 0 10%;
+            }
+            .tag {
+                flex: 0 0 10%;
+            }
+            .desc {
+                flex: 0 0 70%;
+            }
+        }
+    }
+}
+.referDetail {
+    h3 {
+        font-size: 2rem;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #000;
+    }
+
+    dl {
+        display: flex;
+
+        dt {
+            flex: 1 1 15%;
+            padding: 20px 0;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        dd {
+            flex: 1 1 85%;
+            padding: 20px 0;
+            border-bottom: 1px solid #000;
         }
     }
 }
@@ -430,29 +464,29 @@
 
 //site
 #siteCont {
-    background-color: $color-black;
-
+    background: $color-black;
     h1 {
         color: $white;
     }
 }
 .siteCont {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
 
-    a {
-        flex: 0 0 32%;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        li {
+            flex: 0 0 32%;
+        }
     }
 
     .site {
         margin-bottom: 30px;
-
         .siteText {
             background-color: #151515;
             color: $white;
             padding: 35px;
-
             h2 {
                 font-family: $font-main;
                 font-size: 50px;
@@ -465,7 +499,7 @@
                 color: #B0AEAD;
             }
         }
-    } 
+    }
 }
 
 

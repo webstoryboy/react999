@@ -7,12 +7,12 @@ import Loading from '../components/Loading'
 import { Link } from 'react-router-dom'
 
 
-function ReferInfo({id, title, desc, image}){
+function ReferInfo({id, title, desc, image, category, property, element}){
     return (
         <li>
             <Link to = {{ 
                 pathname: 'reference-detail',
-                state: {id, title, desc, image}
+                state: {id, title, desc, image, category, property, element}
             }}>
                 <span className="alpha">{id}</span>
                 <span className="tag">{title}</span>
@@ -42,7 +42,7 @@ class Reference extends React.Component {
     componentDidMount(){
         setTimeout(() => {
             this.getRefer();
-        }, 3000);
+        }, 1000);
     }
     
     render () {
@@ -52,7 +52,7 @@ class Reference extends React.Component {
                 <Header color="white" />
                 { isLoading ? (
                     <div className="loading">
-                        <Loading />
+                        <Loading color="white" />
                     </div>
                 ) : (
                     <main id="main">
@@ -71,6 +71,9 @@ class Reference extends React.Component {
                                                 title={info.title}
                                                 desc={info.desc}
                                                 image={info.image}
+                                                category={info.category}
+                                                property={info.property}
+                                                element={info.element}
                                             />
                                         ))}
                                     </ul>
