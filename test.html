@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function a(){
+        //     document.write("a");
+        //     document.write("<br>");
+        // }
+        // function b(){
+        //     document.write("b");
+        //     document.write("<br>");
+        // }
+        // a();
+        // b();
+        // //a
+        // //b
+
+        // function a(){
+        //     setTimeout(function(){
+        //         console.log('A');
+        //     },1000);
+        // }
+        // function b(){
+        //     console.log('B');
+        // }
+        // a();
+        // b();
+        
+        //콜백함수
+        // function a(callback){
+        //     setTimeout(function(){
+        //         console.log('A');
+        //         callback();
+        //     },1000);
+        // }
+        // function b(){
+        //     console.log('B');
+        // }
+        // a(function(){
+        //     b();
+        // });
+
+        //콜백지옥
+        // function a(callback){
+        //     setTimeout(function(){
+        //         console.log('A');
+        //         callback();
+        //     },1000);
+        // }
+        // function b(callback){
+        //     setTimeout(function(){
+        //         console.log('B');
+        //         callback();
+        //     },1000);
+        // }
+        // function c(callback){
+        //     setTimeout(function(){
+        //         console.log('C');
+        //         callback();
+        //     },1000);
+        // }
+        // function d(){
+        //     setTimeout(function(){
+        //         console.log('D');
+        //     },1000);
+        // }
+        // a(function(){
+        //     b(function(){
+        //         c(function(){
+        //             d()
+        //         });
+        //     });
+        // });
+        
+        //promise
+        // function a(){
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             console.log("A");
+        //             resolve();
+        //         },1000);
+        //     });
+        // }
+        // function b(){
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             console.log("B");
+        //             resolve();
+        //         },1000);
+        //     });
+        // }
+        // function c(){
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             console.log("C");
+        //             resolve();
+        //         },1000);
+        //     });
+        // }
+        // function d(){
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             console.log("D");
+        //             resolve();
+        //         },1000);
+        //     });
+        // }
+        
+        // // a()
+        // // .then(() => {
+        // //     return b()
+        // // }).then(() => {
+        // //     return c()
+        // // }).then(() => {
+        // //     return d()
+        // // })
+
+        // a()
+        // .then(() => b())
+        // .then(() => c())
+        // .then(() => d())
+
+
+        //promise
+        function a(){
+            return new Promise((resolve, reject) => {
+                if(isError){
+                    reject()
+                }
+                setTimeout(() => {
+                    console.log("A");
+                    resolve();
+                },1000);
+            });
+        }
+        a()
+            .then()
+            .catch((error) => {
+                console.log(error)
+            })
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

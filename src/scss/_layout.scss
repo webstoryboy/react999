@@ -48,8 +48,11 @@
         flex: 1 1 30%;
         text-align: center;
         font-size: 2.2rem;
-        font-family: $font-main;
-        font-weight: bold;
+        padding-bottom: 0.2rem;
+        a {
+            font-family: $font-main;
+            font-weight: bold;
+        }
     }
 
     .nav {
@@ -267,9 +270,7 @@
 
 
 //about
-#aboutCont {}
 .aboutCont {
-
     > div {
         font-size: 1.2rem;
         font-family: $font-korea-main;
@@ -299,12 +300,13 @@
     > div:nth-child(2){
         display: flex;
         margin-bottom: 350px;
+        justify-content: space-between;
 
         .aiLeft {
-            flex: 1 1 70%
+            flex: 0 0 66%
         }
         .aiRight {
-            flex: 1 1 30%
+            flex: 0 0 30%
         }
         h2 {
             margin-top: 0;
